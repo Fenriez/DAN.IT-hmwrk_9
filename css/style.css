@@ -8,6 +8,10 @@ html, body {
 }
 
 section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    align-content: center;
     text-align: center;
 }
 
@@ -15,7 +19,7 @@ section {
 .wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(9, minmax(50vh, max-content));
+    grid-auto-rows: minmax(400px, 50vh);
     justify-content: center;
 }
 
@@ -26,6 +30,7 @@ section {
     align-content: flex-end;
     padding: 0 0 145px 82px;
     background: url(../images/bg/bg_header.png) no-repeat center;
+    background-attachment: fixed;
     background-size: cover;
     color: #ffffff;
 }
@@ -64,7 +69,7 @@ section {
     color: #ffffff;
 }
 section h3 {
-    margin-top: 112px;
+    /* margin-top: 112px; */
     font-size: 2.2rem;
     font-weight: 700;
     color: #333333;
@@ -79,13 +84,13 @@ section h5 {
     color:  #4d4943;
     font-size: 1.7rem;
 }
-.underline {
+.underline_orange {
     position: relative;
 }
-.underline::after {
+.underline_orange::after {
     position: absolute;
     left: 50%;
-    bottom: -75px;
+    bottom: -60px;
     transform: translate(-50%, -50%);
     content: "";
     background-color: #f1ad1d;
@@ -96,26 +101,48 @@ section h5 {
 /* Block #3 */
 .change {
     background: url(../images/bg/bg_speed.png) no-repeat center #000000;
+    background-attachment: fixed;
     background-size: cover;
 }
 
-.feature {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: max-content;
-    grid-gap: 100px;
-    align-content: center;
+.feature {    
+    grid-template-columns: 75%;
+    justify-content: center;
     background: url(../images/bg/bg-tree.png) no-repeat center #000000;
+    background-attachment: fixed;
     background-size: cover;
+}
+.logo_block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .themeforest {
+    grid-template-columns: 575px;
+    justify-content: center;
     background: url(../images/bg/bg-bridge.png) no-repeat center #000000;
+    background-attachment: fixed;
     background-size: cover;
 }
 .themeforest h5 {
+    font-family: 'Open Sans';
     font-size: 1.8rem;
+    line-height: 30px;
 }
 .themeforest a {
     color: #f1ad1d;
+}
+.underline_white {
+    position: relative;
+}
+.underline_white::after {
+    position: absolute;
+    left: 50%;
+    bottom: -45px;
+    transform: translate(-50%, -50%);
+    content: "";
+    background-color: #ffffff;
+    width: 280px;
+    height: 3px;
 }
