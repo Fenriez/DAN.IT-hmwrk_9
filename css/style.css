@@ -19,7 +19,7 @@ section {
 .wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-auto-rows: minmax(400px, 50vh);
+    grid-auto-rows: minmax(450px, 50vh);
     justify-content: center;
 }
 
